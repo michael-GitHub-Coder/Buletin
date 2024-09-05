@@ -24,11 +24,11 @@ const LatestArt = () => {
                 {Array.isArray(articles) && articles.slice(0, 4).map((article, index) => (
                     <div key={index} className="bg-white overflow-hidden w-[400px] ">
                         <img
-                            className='w-full md:w-[400px] h-[300px] object-center md:rounded-3xl'
+                            className='w-full md:w-[400px] h-[200px] object-center md:rounded-md'
                             src={article.image}
                             alt={article.title}
                         />
-                        <div className="mx-4 mb-5">
+                        <div className=" mb-5">
                             <p className=' text-sm mb-4 text-gray-500'>{article.published}</p>
                             <h2 className='text-xl  mb-4 font-semibold'>{article.title}</h2>
                             <p className=' mb-2 text-sm'>{article.description.substring(0, 95)}</p>

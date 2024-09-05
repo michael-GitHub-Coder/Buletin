@@ -83,9 +83,9 @@ const EditorsPick = () => {
                                 className="w-full h-[200px] object-cover mb-4 md:rounded-md"
                             />
                             <h1 className="font-md font-bold py-2">{item.title.substring(0,100) + "..."}</h1>
-                            <div className="">
-                                <p className="text-red-600 font-semibold">{item.category[0].charAt(0).toUpperCase() + item.category[0].slice(1)}</p>
-                                <a href={item.url} className="text-blue-500 hover:underline">Read More...</a>
+                            <div className="absolute flex gap-40 bottom-5">
+                                <p className="text-red-600 font-semibold ">{item.category[0].charAt(0).toUpperCase() + item.category[0].slice(1)}</p>
+                                <a href={item.url} className="text-blue-500 hover:underline ">Read More...</a>
                             </div>
                         </div>
                     ))}
