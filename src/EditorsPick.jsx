@@ -54,7 +54,7 @@ const EditorsPick = () => {
                 <h2 className="flex text-red-600 mt-3">See all<FaArrowRight className="ml-2 mt-1" /></h2>
             </div>
 
-            <div className="w-full overflow-hidden">
+            <div className="w-full overflow-hidden rounded-md">
                 <div className="relative">
                     <Slider {...settings} className="w-[400rem] h-[400px]">
                         {Array.isArray(data) && data.map((item, index) => (
@@ -62,7 +62,7 @@ const EditorsPick = () => {
                                 <img
                                     src={item.image}
                                     alt={item.title || "News Image"}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover rounded-md"
                                 />
                                 <div className="absolute inset-0 flex flex-col items-center py-72 px-4 bg-black/60 text-white">
                                     <h1 className="text-2xl font-bold text-left my-2">{item.title}</h1>
