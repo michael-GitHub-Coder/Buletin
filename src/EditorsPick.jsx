@@ -82,11 +82,11 @@ const EditorsPick = () => {
                                 alt={`Image ${index}`}
                                 className="w-full h-[200px] object-cover mb-4 md:rounded-md"
                             />
-                            <div className="px-2">
-                                <h1 className="font-md font-bold py-2">{item.title.substring(0,100) + "..."}</h1>
-                                <a href={item.url} className="text-red-600 hover:text-red-400 hover:underline">Read More</a>
+                            <h1 className="font-md font-bold py-2">{item.title.substring(0,100) + "..."}</h1>
+                            <div className="">
+                                <p className="text-red-600 font-semibold">{item.category[0].charAt(0).toUpperCase() + item.category[0].slice(1)}</p>
+                                <a href={item.url} className="text-blue-500 hover:underline">Read More...</a>
                             </div>
-                            <p className="text-gray-500 mx-2 font-semibold">{item.category[0].charAt(0).toUpperCase() + item.category[0].slice(1)}</p>
                         </div>
                     ))}
                 </div>

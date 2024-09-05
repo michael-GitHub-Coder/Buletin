@@ -31,14 +31,14 @@ export const Body = () => {
                             </div>
                             <div className="grid grid-cols">
                                 <div className="md:hidden mb-4 flex justify-between mx-4 gap-9 font-semibold">
-                                    <p className="text-gray-500">{item.category}</p>
+                                    <p className="text-gray-500">{item.category[0].charAt(0).toUpperCase() + item.category[0].slice(1)}</p>
                                     <p className="text-red-600">2 min read</p>
                                 </div>
-                                <a href={item.url} >
-                                    <button className="md:float-right bg-red-600 w-full md:w-[100px] h-[40px] text-white font-semibold hover:bg-red-400">Read More</button>
+                                <a href={item.url} className="cursor-pointer">
+                                    <button className="md:float-right bg-red-600 w-full md:w-[100px] h-[40px] text-white hover:bg-red-400 font-semibold ">Read More</button>
                                 </a>
                                 <div className="hidden md:flex gap-9 font-semibold md:-mt-8">
-                                    <p className="text-gray-500 ">{item.category}</p>
+                                    <p className="text-gray-500 ">{item.category[0].charAt(0).toUpperCase() + item.category[0].slice(1)}</p>
                                     <p className="text-red-600">2 min read</p>
                                 </div>
                             </div>

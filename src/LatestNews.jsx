@@ -19,7 +19,7 @@ const LatestArt = () => {
 
         <div>
             <div className='container mx-auto flex flex-col'>
-            <h1 className='text-[40px] font-bold ml-2'>Latest News</h1>
+            <h1 className='text-[40px] font-bold mt-4 ml-2'>Latest News</h1>
             <div className="md:flex grid-cols-1 justify-center pt-10 gap-6 md:rounded-[20px]">
                 {Array.isArray(articles) && articles.slice(0, 4).map((article, index) => (
                     <div key={index} className="bg-white overflow-hidden w-[400px] ">
@@ -28,13 +28,13 @@ const LatestArt = () => {
                             src={article.image}
                             alt={article.title}
                         />
-                        <div className="mx-4">
+                        <div className="mx-4 mb-5">
                             <p className=' text-sm mb-4 text-gray-500'>{article.published}</p>
                             <h2 className='text-xl  mb-4 font-semibold'>{article.title}</h2>
                             <p className=' mb-2 text-sm'>{article.description.substring(0, 95)}</p>
 
                             <div className=' flex justify-between'>
-                                <p className=' text-red-600 font-bold'>{article.category}</p>
+                                <p className=' text-red-600 font-bold'>{article.category[0].charAt(0).toUpperCase() + article.category[0].slice(1)}</p>
                                 <p className='text-gray-500 mr-6'>8 min read</p>
                             </div>
                             <a
@@ -43,7 +43,7 @@ const LatestArt = () => {
                                 rel="noopener noreferrer"
                                 className='text-blue-500 hover:underline'
                             >
-                                Read more
+                                Read More...
                             </a>
 
 
@@ -53,8 +53,6 @@ const LatestArt = () => {
 
                 ))}
             </div>
-
-            {/* <a className='text-red-700 font-semibold  flex justify-end pr-40 pt-20 text-xl' href="">See all </a> */}
         </div>
         </div>
     );
