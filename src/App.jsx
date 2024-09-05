@@ -1,6 +1,7 @@
 import { Navbar } from "./navbar"
 import { Body } from "./body"
 import EditorsPick from "./EditorsPick"
+import Footer from './Footer'
 import LatestArt from "./LatestNews"
 import { Subscribe } from "./Subscribe"
 
@@ -12,6 +13,7 @@ function App(){
     <LatestArt />
     <EditorsPick />
     <Subscribe />
+    <Footer />
     </>
   )
 }

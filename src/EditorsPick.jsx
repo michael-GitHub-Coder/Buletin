@@ -73,7 +73,7 @@ const EditorsPick = () => {
                     </Slider>
                 </div>
             </div>
-            <div className="mx-auto container">
+            {/* <div className="mx-auto container">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                     {Array.isArray(data) && data.slice(0, 4).map((item, index) => (
                         <div key={index} className="relative h-[400px] bg-white rounded-md mt-20">
@@ -90,7 +90,7 @@ const EditorsPick = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

@@ -14,11 +14,11 @@ export const Navbar = () => {
           <div className="font-bold text-3xl text-red-600">Buletin.</div>
           <ul className="hidden md:flex gap-11 font-bold cursor-pointer">
                 <li className="hover:text-red-600">
-                    <a href="#">Stories</a>
+                    <a href="#">News</a>
                 </li>
-                <li className="hover:text-red-600">
+                {/* <li className="hover:text-red-600">
                     <a href="#">Creator</a>
-                </li>
+                </li> */}
                 <li className="hover:text-red-600">
                     <a href="#">Community</a>
                 </li>

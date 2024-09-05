@@ -28,10 +28,10 @@ const LatestArt = () => {
                             src={article.image}
                             alt={article.title}
                         />
-                        <div className="mb-5">
+                        <div className="mb-5 mx-4">
                             <p className=' text-sm my-4 text-gray-500'>{article.published.substring(0,16)}</p>
-                            <h2 className='text-xl  mb-4 font-semibold'>{article.title}</h2>
-                            <p className=' mb-2 text-sm'>{article.description.substring(0, 95)}</p>
+                            <h2 className='text-xl mr-4  mb-4 font-semibold'>{article.title}</h2>
+                            <p className=' mb-2 mr-4 text-sm'>{article.description.substring(0, 95)}</p>
 
                             <div className=' flex justify-between'>
                                 <p className=' text-red-600 font-bold'>{article.category[0].charAt(0).toUpperCase() + article.category[0].slice(1)}</p>
