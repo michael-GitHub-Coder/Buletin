@@ -66,7 +66,7 @@ const EditorsPick = () => {
                                 />
                                 <div className="absolute inset-0 flex flex-col items-center py-72 px-4 bg-black/60 text-white">
                                     <h1 className="text-2xl font-bold text-left my-2">{item.title}</h1>
-                                    <h1 className="text-md ">{item.published}</h1>
+                                    <h1 className="text-md ">{item.published.substring(0,16)}</h1>
                                 </div>
                             </div>
                         ))}

@@ -24,7 +24,7 @@ export const Body = () => {
                         <div className="w-full">
                             <div className="mx-4 md:mx-0">
                                 <div className="flex gap-11 py-8 font-semibold text-gray-400"><h3>{item.author}</h3>
-                                    <h3>{item.published}</h3>
+                                    <h3>{item.published.substring(0,16)}</h3>
                                 </div>
                                 <h1 className="font-bold text-2xl">{item.title}</h1>
                                 <p className="py-8 text-xl">{item.description}</p>

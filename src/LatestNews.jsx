@@ -28,8 +28,8 @@ const LatestArt = () => {
                             src={article.image}
                             alt={article.title}
                         />
-                        <div className=" mb-5">
-                            <p className=' text-sm mb-4 text-gray-500'>{article.published}</p>
+                        <div className="mb-5">
+                            <p className=' text-sm my-4 text-gray-500'>{article.published.substring(0,16)}</p>
                             <h2 className='text-xl  mb-4 font-semibold'>{article.title}</h2>
                             <p className=' mb-2 text-sm'>{article.description.substring(0, 95)}</p>
 
