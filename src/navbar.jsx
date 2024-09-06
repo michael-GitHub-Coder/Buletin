@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CiMenuBurger } from "react-icons/ci";
-import { FaTimes } from "react-icons/fa";
+import { FaAngleRight, FaTimes } from "react-icons/fa";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { GoBell } from "react-icons/go";
 
@@ -45,7 +45,7 @@ export const Navbar = () => {
 
    
         {isOpen && (
-            <div className="fixed text-white top-0 left-0 w-full h-full bg-red-600 z-50 flex flex-col justify-center items-center space-y-4">
+            <div className="fixed text-white top-0 left-0 w-full h-full bg-red-600 z-50 flex flex-col  space-y-4">
 
               <button
                 className="absolute top-4 right-10 text-white"
@@ -54,13 +54,13 @@ export const Navbar = () => {
                 <FaTimes className="text-3xl" />
               </button>
               
-              <ul className="flex flex-col items-center gap-4 font-bold cursor-pointer">
-                <li className="hover:underline">
-                  <a href="#">Stories</a>
+              <ul className="flex flex-col px-8 py-20 gap-4 font-bold cursor-pointer">
+                <li className="hover:underline flex justify-between mr-4">
+                  <a href="#">News</a>
                 </li>
-                <li className="hover:underline">
+                {/* <li className="hover:underline">
                   <a href="#">Creator</a>
-                </li>
+                </li> */}
                 <li className="hover:underline">
                   <a href="#">Community</a>
                 </li>

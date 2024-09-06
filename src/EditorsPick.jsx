@@ -95,4 +95,9 @@ const EditorsPick = () => {
     );
 }
 
-export default EditorsPick;
+const getGet = async () =>{
+    const res = await fetch("https://api.mediastack.com/v1/news?access_key=3ff0c3bb7604dcb9501fc606f79bf97c");
+    const data = await res.json();
+    return data;
+}
+export {EditorsPick as default , getGet}
