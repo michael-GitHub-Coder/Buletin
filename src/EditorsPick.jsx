@@ -54,7 +54,7 @@ const EditorsPick = () => {
                 <h2 className="flex text-red-600 mt-3">See all<FaArrowRight className="ml-2 mt-1" /></h2>
             </div>
 
-            <div className="w-full overflow-hidden rounded-md">
+            <div className="w-full overflow-hidden md:rounded-md">
                 <div className="relative">
                     <Slider {...settings} className="w-[400rem] h-[400px]">
                         {Array.isArray(data) && data.map((item, index) => (

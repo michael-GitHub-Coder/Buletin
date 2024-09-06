@@ -3,9 +3,15 @@ import { CiMenuBurger } from "react-icons/ci";
 import { FaAngleRight, FaTimes } from "react-icons/fa";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { GoBell } from "react-icons/go";
+import Write from "./Write";
 
 export const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
+  const [showComponent, setShowComponent] = useState(false);
+
+  const handleClick = () => {
+      setShowComponent(true); 
+  };
 
   return (
     <div>
@@ -14,7 +20,7 @@ export const Navbar = () => {
           <div className="font-bold text-3xl text-red-600">Buletin.</div>
           <ul className="hidden md:flex gap-11 font-bold cursor-pointer">
                 <li className="hover:text-red-600">
-                    <a href="#">News</a>
+                    <a href="#LatestNews">News</a>
                 </li>
                 {/* <li className="hover:text-red-600">
                     <a href="#">Creator</a>
@@ -23,15 +29,16 @@ export const Navbar = () => {
                     <a href="#">Community</a>
                 </li>
                 <li className="hover:text-red-600">
-                    <a href="#">Subscribe</a>
+                    <a href="#subscribe">Subscribe</a>
                 </li>
           </ul>
           <div className="hidden md:flex gap-11">
             <div className="flex gap-2">
               <FaRegPenToSquare className="h-6 text-red-600" />
               <h3 className="hover:text-red-600">
-                <a href="#">Write</a>
+                <a href="#" onClick={handleClick}>Write</a>
               </h3>
+              {showComponent && <Write />} 
             </div>
             <a href="#">
               <GoBell className="h-7 text-red-600" />

@@ -15,8 +15,8 @@ const Footer = () => {
                     <BsTwitterX />
                     <VscGithubInverted />
                 </div>
-                <div className='pt-5  flex justify-center'>
-                    <h1 className='text-[16px] md:text-[20px]'>&copy; 2024 Buletin, All rights reserved.</h1>
+                <div className='pt-5 flex justify-center'>
+                    <h1 className='text-[16px] md:text-[20px] pb-px'>&copy; 2024 Buletin, All rights reserved.</h1>
                 </div>
             </div> 
             
