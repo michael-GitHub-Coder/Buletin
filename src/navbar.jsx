@@ -36,9 +36,9 @@ export const Navbar = () => {
             <div className="flex gap-2">
               <FaRegPenToSquare className="h-6 text-red-600" />
               <h3 className="hover:text-red-600">
-                <a href="#" onClick={handleClick}>Write</a>
+                <a href="#" >Write</a>
               </h3>
-              {showComponent && <Write />} 
+              {/* {showComponent && <Write />}  */}
             </div>
             <a href="#">
               <GoBell className="h-7 text-red-600" />

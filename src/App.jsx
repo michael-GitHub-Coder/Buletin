@@ -1,6 +1,3 @@
-import { BrowserRouter, createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom"
-import MainLayout from "./MainLayout"
-import HomePage from "./HomePage"
 import { Navbar } from "./navbar"
 import LatestNews from "./LatestNews"
 import EditorsPick from "./EditorsPick"
@@ -19,7 +16,6 @@ function App(){
   // return(<RouterProvider router={router} />)
   return (
     <>
-    
     <Navbar/> 
     <Body/>
     <section id="LatestNews">
@@ -32,10 +28,8 @@ function App(){
       <Subscribe />
     </section>
     <Footer />
-   
     </>
   )
-  // )
 }
 
 export default App
