@@ -52,7 +52,7 @@ const EditorsPick = () => {
                             <div key={index}>
                                 <div style={{ ...divStyle, 'backgroundImage': `url(${item.image})` }}>
                                     <div className="text-white">
-                                        <h1 className="text-2xl font-bold text-left my-2">{item.title}</h1>
+                                        <h1 className="text-2xl px-10 text-center font-bold text-left my-2">{item.title}</h1>
                                         <h1 className="text-md text-center">{item.published.substring(0,16)}</h1>
                                     </div>
                                 </div>
