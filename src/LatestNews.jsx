@@ -12,9 +12,6 @@ const LatestArt = () => {
     }, []);
 
 
-
-    console.log(articles)
-
     return (
 
         <div>
@@ -34,7 +31,7 @@ const LatestArt = () => {
                             <p className=' mb-2 mr-4 text-sm'>{article.description.substring(0, 95)}</p>
 
                             <div className=' flex justify-between'>
-                                <p className=' text-red-600 font-bold'>{article.category[0].charAt(0).toUpperCase() + article.category[0].slice(1)}</p>
+                                <p className=' text-red-600 font-bold'>{article.category}</p>
                                 <p className='text-gray-500 mr-6'>8 min read</p>
                             </div>
                             <a
