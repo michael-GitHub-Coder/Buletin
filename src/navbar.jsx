@@ -7,11 +7,15 @@ import Write from "./Write";
 
 export const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
-  const [showComponent, setShowComponent] = useState(false);
+  // const [showComponent, setShowComponent] = useState(false);
 
-  const handleClick = () => {
-      setShowComponent(true); 
-  };
+  // const handleClick = () => {
+  //     setShowComponent(true); 
+  // };
+
+  //TODO: create a search articles and maybe write new articles.
+  //TODO: login and logout for authors.
+  //TODO: Dashboard for editors to review and aprove or reject the articles and give notes. 
 
   return (
     <div>

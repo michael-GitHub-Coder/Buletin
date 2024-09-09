@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
+import 'react-slideshow-image/dist/styles.css'
+import { Slide } from 'react-slideshow-image';
 
 const EditorsPick = () => {
     const [data, setData] = useState([]);
@@ -28,21 +26,14 @@ const EditorsPick = () => {
         };
         fetchData();
     }, []);
-
-    console.log(data)
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 5,
-        slidesToScroll: 4,
-        responsive: [
-            { breakpoint: 1024, settings: { slidesToShow: 3, slidesToScroll: 3 } },
-            { breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 2 } },
-            { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } }
-        ],
-    };
+      
+      const divStyle = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundSize: 'cover',
+        height: '400px'
+      }
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
@@ -55,22 +46,19 @@ const EditorsPick = () => {
             </div>
 
             <div className="w-full overflow-hidden md:rounded-md">
-                <div className="relative">
-                    <Slider {...settings} className="w-[400rem] h-[400px]">
+                <div className="relative slide-container">
+                    <Slide >
                         {Array.isArray(data) && data.map((item, index) => (
-                            <div key={index} className="relative">
-                                <img
-                                    src={item.image}
-                                    alt={item.title || "News Image"}
-                                    className="w-full h-full object-cover rounded-md"
-                                />
-                                <div className="absolute inset-0 flex flex-col items-center py-72 px-4 bg-black/60 text-white">
-                                    <h1 className="text-2xl font-bold text-left my-2">{item.title}</h1>
-                                    <h1 className="text-md ">{item.published.substring(0,16)}</h1>
+                            <div key={index}>
+                                <div style={{ ...divStyle, 'backgroundImage': `url(${item.image})` }}>
+                                    <div className="text-white">
+                                        <h1 className="text-2xl font-bold text-left my-2">{item.title}</h1>
+                                        <h1 className="text-md text-center">{item.published.substring(0,16)}</h1>
+                                    </div>
                                 </div>
                             </div>
                         ))}
-                    </Slider>
+                    </Slide>
                 </div>
             </div>
             {/* <div className="mx-auto container">
